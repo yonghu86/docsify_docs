@@ -1,0 +1,4 @@
+- [官网](http://www.rdiframework.net/)
+- [博客](http://blog.rdiframework.net/)
+- [中文](/zh-cn/)
+- [En](/en-us/)
