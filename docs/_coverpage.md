@@ -1,4 +1,4 @@
-![logo](F:\RDI\docsify\rdiframework-docs\docs\zh-cn\image\logo.png)
+![RDIFramework.NET](https://raw.githubusercontent.com/yonghu86/docsify_docs/master/docs/zh-cn/image/logo.png)
 
 # RDIFramework.NET
 
