@@ -1,17 +1,17 @@
 ## 前端组件
 
-若依封装了一些常用的JS组件方法。
+RDIFramework.NET框架封装了一些常用的JS组件方法。
 
-| 名称     | 代码        | 介绍             |
-| -------- | ----------- | ---------------- |
-| 表格     | $.table     | 表格封装处理     |
-| 表格树   | $.treeTable | 表格树封装处理   |
-| 表单     | $.form      | 表单封装处理     |
-| 弹出层   | $.modal     | 弹出层封装处理   |
-| 操作     | $.operate   | 操作封装处理     |
-| 校验     | $.validate  | 校验封装处理     |
-| 树插件   | $.tree      | 树插件封装处理   |
-| 通用方法 | $.common    | 通用方法封装处理 |
+| 名称     | 代码        | 介绍                       |
+| -------- | ----------- | -------------------------- |
+| 表格     | $.table     | bt-table表格封装处理       |
+| 表格树   | $.treeTable | bt-treeTable表格树封装处理 |
+| 表单     | $.form      | 表单封装处理               |
+| 弹出层   | $.modal     | 弹出层封装处理             |
+| 操作     | $.operate   | 操作封装处理               |
+| 校验     | $.validate  | 校验封装处理               |
+| 树插件   | $.tree      | 树插件封装处理             |
+| 通用方法 | $.common    | 通用方法封装处理           |
 
 ## 通用方法
 
@@ -390,29 +390,11 @@ $.modal.closeLoading();
 
 ## 字典使用
 
-配置好相关的数据字典信息即可正常使用（系统管理-字典管理）
-
-```html
-<select name="status" th:with="type=${@dict.getType('sys_normal_disable')}">
-  <option value="">所有</option>
-  <option th:each="dict : ${type}" th:text="${dict.dictLabel}" th:value="${dict.dictValue}">
-  </option>
-</select>
-```
-
-
-```html
-<label class="col-sm-2 control-label">回显数据字典值：</label>
-<div class="form-control-static" th:text="${@dict.getLabel('sys_normal_disable', status)}">
-</div>
-```
-
-
-如果在想Table表格数据使用字典，使用formatter格式化
+如果在想Table或jqGrid表格数据使用字典，使用formatter格式化
 
 ```javascript
 // 获取数据字典数据
-var datas = [[${@dict.getType('sys_normal_disable')}]];
+var datas = [{ "ItemName": "正常", "ItemValue": 1, "ListClass": "primary" }, { "ItemName": "停用", "ItemValue": 0, "ListClass": "danger" }];
 
 // 格式化数据字典
 formatter: function(value, row, index) {
